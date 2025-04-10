@@ -1,0 +1,11 @@
+pip install google-generativeai
+
+
+import google.generativeai as genai
+#set up the api key
+genai.configure(api_key="AIzaSyDnleaXPKNGVGQlRe8VxLk9fuUB1PlqNk4")
+
+model= genai.GenerativeModel("gemini-1.5-pro")
+
+response= model.generate_content("Explain MATH IN SIMPLE WOED")
+print(response.text)
